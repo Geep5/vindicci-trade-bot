@@ -26,7 +26,7 @@ TOP_N = int(os.environ.get("TOP_N", "3"))
 MIN_CONFIDENCE = float(os.environ.get("MIN_CONFIDENCE", "60"))
 MIN_ACCURACY_24H = float(os.environ.get("MIN_ACCURACY_24H", "50"))
 MIN_PREDICTIONS = int(os.environ.get("MIN_PREDICTIONS", "5"))
-CHECK_INTERVAL = int(os.environ.get("CHECK_INTERVAL", "120"))
+CHECK_INTERVAL = int(os.environ.get("CHECK_INTERVAL", "20"))
 
 
 def log(msg):
