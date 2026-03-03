@@ -18,7 +18,7 @@ except ImportError:
     sys.exit(1)
 
 # === Configuration (all from env) ===
-VINDICCI = os.environ.get("VINDICCI_SERVER", "https://vindicci-board.fly.dev")
+VINDICCI = os.environ.get("VINDICCI_SERVER", "https://vindicci.xyz")
 PRIVATE_KEY = os.environ.get("HL_PRIVATE_KEY", "")
 SIZE_BTC = float(os.environ.get("SIZE_BTC", "0.001"))
 MODE = os.environ.get("MODE", "single")  # "single" or "multi"
@@ -26,7 +26,7 @@ TOP_N = int(os.environ.get("TOP_N", "3"))
 MIN_CONFIDENCE = float(os.environ.get("MIN_CONFIDENCE", "60"))
 MIN_ACCURACY_24H = float(os.environ.get("MIN_ACCURACY_24H", "50"))
 MIN_PREDICTIONS = int(os.environ.get("MIN_PREDICTIONS", "5"))
-CHECK_INTERVAL = int(os.environ.get("CHECK_INTERVAL", "20"))
+CHECK_INTERVAL = int(os.environ.get("CHECK_INTERVAL", "120"))
 
 
 def log(msg):

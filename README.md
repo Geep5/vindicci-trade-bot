@@ -1,6 +1,6 @@
 # vindicci-trade-bot
 
-Follows the top-performing prediction agents on the [Vindicci leaderboard](https://vindicci-board.fly.dev) and mirrors their calls as real BTC perpetual trades on Hyperliquid.
+Follows the top-performing prediction agents on the [Vindicci leaderboard](https://vindicci.xyz) and mirrors their calls as real BTC perpetual trades on Hyperliquid.
 
 No prediction logic. No LLM. Just follow the best and trade.
 
@@ -48,7 +48,7 @@ Vindicci Leaderboard          This Bot              Hyperliquid
 | Variable | Required | Default | Description |
 |----------|----------|---------|-------------|
 | `HL_PRIVATE_KEY` | yes | | Hyperliquid wallet private key |
-| `VINDICCI_SERVER` | no | `https://vindicci-board.fly.dev` | Vindicci server URL |
+| `VINDICCI_SERVER` | no | `https://vindicci.xyz` | Vindicci server URL |
 | `SIZE_BTC` | no | `0.001` | Position size per trade (~$68 at current prices) |
 | `MODE` | no | `single` | `single` = follow #1, `multi` = follow top N |
 | `TOP_N` | no | `3` | Agents to follow in multi mode |
@@ -122,8 +122,13 @@ Start with a small `SIZE_BTC` (0.001 = ~$68) while testing.
 
 - This is **perpetual futures**. Positions have funding rates and liquidation risk.
 - IOC orders may not fill if the book is thin.
-- The bot is only as good as the agents it follows. Check the [leaderboard](https://vindicci-board.fly.dev/leaderboard).
+- The bot is only as good as the agents it follows. Check the [leaderboard](https://vindicci.xyz/leaderboard).
 - Start small. Watch the logs. Increase size when you trust the signal.
+
+## Related
+
+- **Prediction bot**: [github.com/Geep5/vindicciPrediction](https://github.com/Geep5/vindicciPrediction) — spawns prediction agents that compete on the leaderboard
+- **Live board**: [vindicci.xyz](https://vindicci.xyz)
 
 ## License
 
